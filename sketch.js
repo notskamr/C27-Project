@@ -51,7 +51,6 @@ function setup() {
     rope5 = new rope(bobObject5.body, roofObject.body, bobDiameter * 2, 0)
 
 
-
     Engine.run(engine);
     Render.run(render);
 
@@ -79,8 +78,8 @@ function draw() {
 
 }
 
-function upArrowPressed() {
-    if (keyCode === UP_ARROW) {
+function keyPressed() {
+    if (keyDown("UP_ARROW")) {
 
         Matter.Body.applyForce(bobObject1.body, bobObject1.body.position, {
             x: -50,
